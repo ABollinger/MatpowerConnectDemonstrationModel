@@ -523,7 +523,7 @@ to run-matpower
   ;check to make sure we're passing a feasible network to the matpowerconnect extension
   ifelse (length item 1 matpower-input-list > 0 and length item 2 matpower-input-list > 0 and length item 3 matpower-input-list > 0 and length item 4 matpower-input-list > 0) [    
     ;pass the input list to matpower
-    set matpower-output-list matpowerconnect:octavetest matpower-input-list
+    set matpower-output-list matpowerconnect:octaverun matpower-input-list
     if (print-power-flow-data?) [print matpower-output-list]
     
     ;parse the output list
